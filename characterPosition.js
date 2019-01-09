@@ -12,3 +12,5 @@ function countLetters (string) {
 }
 
 console.log(countLetters('THis is a test'));
+
+
