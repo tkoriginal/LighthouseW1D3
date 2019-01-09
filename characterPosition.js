@@ -1,12 +1,11 @@
 function countLetters (string) {
   let finalOutput = {};
   stringArray = string.toLowerCase().split('');
-  console.log(stringArray);
-  stringArray.forEach((letter) => {
+  stringArray.forEach((letter, i) => {
     if (!finalOutput[letter]) {
-      finalOutput[letter] = 1;
+      finalOutput[letter] = [i];
     } else {
-      finalOutput[letter]++;
+      finalOutput[letter].push(i)
     }
   })
   return finalOutput;
