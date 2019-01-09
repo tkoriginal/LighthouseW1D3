@@ -1,7 +1,14 @@
 function countLetters (string) {
   let finalOutput = {};
   stringArray = string.split(' ').join('').toLowerCase().split('');
-  console.log(stringArray);
+  stringArray.forEach((letter) => {
+    if (!finalOutput[letter]) {
+      finalOutput[letter] = 1;
+    } else {
+      finalOutput[letter]++;
+    }
+  })
+  return finalOutput;
 }
 
-countLetters('THis is a test');
+console.log(countLetters('THis is a test'));
